@@ -5,7 +5,7 @@ ymaps.ready(init);
                 zoom: 7
             });
                 
-            `myGeoObject = new ymaps.GeoObject({
+            myGeoObject = new ymaps.GeoObject({
             // Описание геометрии.
             geometry: {
                 type: "Point",
