@@ -9,15 +9,12 @@ function init () {
     myMap = new ymaps.Map('map', {
         // При инициализации карты обязательно нужно указать
         // её центр и коэффициент масштабирования.
-        center: [55.76, 37.64], // Москва
-        zoom: 10
+        center: [60.008459278062944,30.374591637430463], // Москва
+        zoom: 16
     }, {
         searchControlProvider: 'yandex#search'
     });
 
-    document.getElementById('destroyButton').onclick = function () {
-        // Для уничтожения используется метод destroy.
-        myMap.destroy();
     };
 
 }
