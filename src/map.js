@@ -11,8 +11,6 @@ function init () {
         // её центр и коэффициент масштабирования.
         center: [60.008459278062944,30.374591637430463], // Москва
         zoom: 15
-    }, {
-        searchControlProvider: 'yandex#search'
     });
 
     };
