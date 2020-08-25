@@ -40,20 +40,18 @@ function init () {
      myMap.events.add('click', function (e) {
         if (!myMap.balloon.isOpen()) {
             var coords = e.get('coords');
-            var firstGeoObject = res.geoObjects.get(0);
+            
             myMap.balloon.open(coords, {
                 contentHeader:'Событие!',
                 contentBody:'<p>Кто-то щелкнул по карте.</p>' +
-                    '<p>Координаты щелчка: ' 
-                firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
-                        // Получаем путь до топонима, если метод вернул null, запрашиваем наименование здания.
-                        firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()'</p>',
+                    '<p>Координаты щелчка: </p>',
                 contentFooter:'<sup>Щелкните еще раз</sup>'
             });
         }
         else {
             myMap.balloon.close();
         }
+          getAddress(coords);
     });
     
      function getAddress(coords) {
