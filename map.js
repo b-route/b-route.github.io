@@ -17,12 +17,12 @@ function init () {
             // Описание геометрии.
             geometry: {
                 type: "Point",
-                coordinates: [55.8, 37.8]
+                coordinates: [60.00759469691767,30.377139829924605]
             },
             // Свойства.
             properties: {
                 // Контент метки.
-                iconContent: 'Я тащусь',
+                iconContent: 'Склад',
                 hintContent: 'Ну давай уже тащи'
             }
         }, {
@@ -30,7 +30,7 @@ function init () {
             // Иконка метки будет растягиваться под размер ее содержимого.
             preset: 'islands#blackStretchyIcon',
             // Метку можно перемещать.
-            draggable: true
+            draggable: false
         }),
         
          myMap.geoObjects
