@@ -13,13 +13,28 @@ function init () {
         zoom: 15
     });
 
-     myMap.geoObject
-         .add(new ymaps.Placemark([60.00759469691767,30.377139829924605], {
-            balloonContent: 'Склад'
+    myGeoObject = new ymaps.GeoObject({
+            // Описание геометрии.
+            geometry: {
+                type: "Point",
+                coordinates: [55.8, 37.8]
+            },
+            // Свойства.
+            properties: {
+                // Контент метки.
+                iconContent: 'Я тащусь',
+                hintContent: 'Ну давай уже тащи'
+            }
         }, {
-            preset: 'islands#circleIcon',
-            iconColor: '#3caa3c'
-        }))
+            // Опции.
+            // Иконка метки будет растягиваться под размер ее содержимого.
+            preset: 'islands#blackStretchyIcon',
+            // Метку можно перемещать.
+            draggable: true
+        }),
+        
+         myMap.geoObjects
+        .add(myGeoObject)
     
     };
 
