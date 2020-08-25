@@ -13,6 +13,14 @@ function init () {
         zoom: 15
     });
 
+     myMap.geoObject.add
+         .add(new ymaps.Placemark([60.00759469691767,30.377139829924605], {
+            balloonContent: 'Склад'
+        }, {
+            preset: 'islands#circleIcon',
+            iconColor: '#3caa3c'
+        }))
+    
     };
 
 
