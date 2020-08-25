@@ -43,10 +43,10 @@ function init () {
             myMap.balloon.open(coords, {
                 contentHeader:'Событие!',
                 contentBody:'<p>Кто-то щелкнул по карте.</p>' +
-                    '<p>Координаты щелчка: ' + [
-                    coords[0].toPrecision(6),
-                    coords[1].toPrecision(6)
-                    ].join(', ') + '</p>',
+                    '<p>Координаты щелчка: ' 
+                firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
+                        // Получаем путь до топонима, если метод вернул null, запрашиваем наименование здания.
+                        firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()'</p>',
                 contentFooter:'<sup>Щелкните еще раз</sup>'
             });
         }
@@ -54,6 +54,26 @@ function init () {
             myMap.balloon.close();
         }
     });
+    
+     function getAddress(coords) {
+        myPlacemark.properties.set('iconCaption', 'поиск...');
+        ymaps.geocode(coords).then(function (res) {
+            var firstGeoObject = res.geoObjects.get(0);
+
+            myPlacemark.properties
+                .set({
+                    // Формируем строку с данными об объекте.
+                    iconCaption: [
+                        // Название населенного пункта или вышестоящее административно-территориальное образование.
+                        firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
+                        // Получаем путь до топонима, если метод вернул null, запрашиваем наименование здания.
+                        firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
+                    ].filter(Boolean).join(', '),
+                    // В качестве контента балуна задаем строку с адресом объекта.
+                    balloonContent: firstGeoObject.getAddressLine()
+                });
+        });
+    }
     
     };
 
