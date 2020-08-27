@@ -41,9 +41,9 @@ function init () {
         if (!myMap.balloon.isOpen()) {
             var coords = e.get('coords');
             let adress='';
-            
+            var firstGeoObject;
             ymaps.geocode(coords).then(function (res) {
-            var firstGeoObject = res.geoObjects.get(0);
+            firstGeoObject = res.geoObjects.get(0);
 
             
         });
