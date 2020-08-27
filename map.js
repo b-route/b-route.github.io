@@ -37,27 +37,25 @@ function init () {
     
     
     
-     myMap.events.add('click', function (e) {
-        if (!myMap.balloon.isOpen()) {
-            var coords = e.get('coords');
-            let adress='';
-            
-            ymaps.geocode(coords).then(function (res) {
-             var firstGeoObject = res.geoObjects.get(0);
-            adress = firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas();
-            
-        });
-            
-            myMap.balloon.open(coords, {
-                contentHeader:'Событие!',
-                contentBody:'<p>Кто-то щелкнул по карте.</p>' +
-                    '<p>Координаты щелчка:' adress' </p>',
-                contentFooter:'<sup>Щелкните еще раз</sup>'
+   placemark.events.add('balloonopen', function (e) {
+        placemark.properties.set('balloonContent', "Идет загрузка данных...");
+
+        // Имитация задержки при загрузке данных (для демонстрации примера).
+        setTimeout(function () {
+            ymaps.geocode(placemark.geometry.getCoordinates(), {
+                results: 1
+            }).then(function (res) {
+                var newContent = res.geoObjects.get(0) ?
+                        res.geoObjects.get(0).properties.get('name') :
+                        'Не удалось определить адрес.';
+
+                // Задаем новое содержимое балуна в соответствующее свойство метки.
+                placemark.properties.set('balloonContent', newContent);
             });
-        }
-        else {
-            myMap.balloon.close();
-        }
+        }, 1500);
+    });
+
+    myMap.geoObjects.add(placemark);
           
     });
     
