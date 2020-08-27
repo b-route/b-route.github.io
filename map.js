@@ -40,11 +40,12 @@ function init () {
      myMap.events.add('click', function (e) {
         if (!myMap.balloon.isOpen()) {
             var coords = e.get('coords');
+            var adress = geocode(coords);
             
             myMap.balloon.open(coords, {
                 contentHeader:'Событие!',
                 contentBody:'<p>Кто-то щелкнул по карте.</p>' +
-                    '<p>Координаты щелчка:' e.geoObjects.get(0).properties.get('metaDataProperty').getAll() ' </p>',
+                    '<p>Координаты щелчка:' \ ' </p>',
                 contentFooter:'<sup>Щелкните еще раз</sup>'
             });
         }
