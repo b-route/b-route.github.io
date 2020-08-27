@@ -41,17 +41,17 @@ function init () {
         if (!myMap.balloon.isOpen()) {
             var coords = e.get('coords');
             let adress='';
-            var firstGeoObject;
+            
             ymaps.geocode(coords).then(function (res) {
-            firstGeoObject = res.geoObjects.get(0);
-
+             var firstGeoObject = res.geoObjects.get(0);
+            adress = firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas();
             
         });
             
             myMap.balloon.open(coords, {
                 contentHeader:'Событие!',
                 contentBody:'<p>Кто-то щелкнул по карте.</p>' +
-                    '<p>Координаты щелчка:' firstGeoObject.getLocalities()' </p>',
+                    '<p>Координаты щелчка:' adress' </p>',
                 contentFooter:'<sup>Щелкните еще раз</sup>'
             });
         }
