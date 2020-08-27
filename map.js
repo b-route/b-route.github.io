@@ -45,7 +45,7 @@ function init () {
             myMap.balloon.open(coords, {
                 contentHeader:'Событие!',
                 contentBody:'<p>Кто-то щелкнул по карте.</p>' +
-                    '<p>Координаты щелчка:'  ' </p>',
+                    '<p>Координаты щелчка: </p>',
                 contentFooter:'<sup>Щелкните еще раз</sup>'
             });
         }
