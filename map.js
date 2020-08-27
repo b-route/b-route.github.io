@@ -35,7 +35,17 @@ function init () {
          myMap.geoObjects
         .add(myGeoObject)
     
-    
+     placemark = new ymaps.Placemark([60.008459278062944,30.374591637430463], {
+            iconContent: "",
+            hintContent: "Выберите адрес"
+        }, {
+            // Запретим замену обычного балуна на балун-панель.
+            balloonPanelMaxMapArea: 0,
+            draggable: "true",
+            preset: "islands#blueStretchyIcon",
+            // Заставляем балун открываться даже если в нем нет содержимого.
+            openEmptyBalloon: true
+        });
     
    placemark.events.add('balloonopen', function (e) {
         placemark.properties.set('balloonContent', "Идет загрузка данных...");
