@@ -62,7 +62,7 @@ function init () {
                 // Задаем новое содержимое балуна в соответствующее свойство метки.
                 placemark.properties.set('balloonContent', newContent);
             });
-        }
+        })
     });
 
     myMap.geoObjects.add(placemark);
