@@ -37,7 +37,7 @@ function init () {
     
      placemark = new ymaps.Placemark([60.008459278062944,30.374591637430463], {
             iconContent: "",
-            hintContent: "Выберите адрес"
+            hintContent: "Перетащите, чтобы выбрать адрес"
         }, {
             // Запретим замену обычного балуна на балун-панель.
             balloonPanelMaxMapArea: 0,
