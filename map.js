@@ -4,7 +4,7 @@ var countOfAdresses=0;
 let numbers =['first_adress', 'second_adress', 'third_adress', 'fourth_adress'];
 let arrCoordinates=[ [60.008459278062944,30.374591637430463]];
 let coordinates = [0,0];
-
+let matrRasst=[[]];
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
 
@@ -107,6 +107,30 @@ function  TSP() {
      
  }
 
-    
+   function matrRasst(){
+   
+        for (var i = 0; i < countOfAdresses+1; i++) {
+            for (var j = i+1; j < countOfAdresses+1; j++) {
+                route = new ymaps.router.Route({
+            referencePoints: [
+                arrCoordinates[i],
+                arrCoordinates[j]
+            ],
+            params: {
+                //Тип маршрутизации - пешеходная маршрутизация.
+                routingMode: 'pedestrian'
+            }
+        }, {
+            // Автоматически устанавливать границы карты так, чтобы маршрут был виден целиком.
+            boundsAutoApply: true
+        });
+                var length = route.getActiveRoute().properties.get("distance");
+                matrRasst[i][j]=lenght;
+                matrRasst[j][i]=lenght;
+    }
+}
+   
+   
+   }
     
 
