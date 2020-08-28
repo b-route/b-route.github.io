@@ -65,9 +65,7 @@ function init () {
                 var adress =newContent;
                 newContent +='<br />  <button onclick="myFunction()">Добавить адрес</button>';
                 
-                function myFunction() {
-                     alert('1');
-                    }
+               
                 // Задаем новое содержимое балуна в соответствующее свойство метки.
                 placemark.properties.set('balloonContent', newContent);
             });
@@ -81,6 +79,10 @@ function init () {
           
     };
 
+
+ function myFunction() {
+                     alert('1');
+                    }
     
 
     
