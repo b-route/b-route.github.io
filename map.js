@@ -99,6 +99,13 @@ function init () {
      
  }
 
+function  TSP() {
+
+   
+         alert('Типа построили');
+     
+     
+ }
 
     
     
