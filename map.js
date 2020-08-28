@@ -108,7 +108,7 @@ function  TSP() {
  }
 
    function matrRasstf(){
-   
+   var route;
         for (var i = 0; i < countOfAdresses+1; i++) {
             for (var j = i+1; j < countOfAdresses+1; j++) {
                 route = new ymaps.route( [
@@ -116,7 +116,7 @@ function  TSP() {
                 arrCoordinates[j]
             ])
                
-                var length = route.router.Route.getLength();
+                var length = route.getHumanLength();
                
             
                 matrRasst[i][j]=lenght;
