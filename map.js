@@ -55,7 +55,7 @@ function init () {
         placemark.properties.set('balloonContent', "Идет загрузка данных...");
 
         // Имитация задержки при загрузке данных (для демонстрации примера).
-        setTimeout(function () {
+       
             ymaps.geocode(placemark.geometry.getCoordinates(), {
                 results: 1
             }).then(function (res) {
@@ -72,31 +72,10 @@ function init () {
                 // Задаем новое содержимое балуна в соответствующее свойство метки.
                 placemark.properties.set('balloonContent', newContent);
             });
-        }, 1500);
+        }
     
-  /*placemark.events.add('balloonopen', function (e) {
-        placemark.properties.set('balloonContent', "Идет загрузка данных...");
-
-        // Имитация задержки при загрузке данных (для демонстрации примера).
-       
-            ymaps.geocode(placemark.geometry.getCoordinates(), {
-                results: 1
-            }).then(function (res) {
-                var newContent = res.geoObjects.get(0) ?
-                        res.geoObjects.get(0).properties.get('name') :
-                        'Не удалось определить адрес.';
-                var adress =newContent;
-                newContent +='<br />  <button id="counter-button"> Добавить адрес </button>';
-                
-             //button.onclick=function(){
-                 
-               //  $('#first_adress').html(adress);
-             //}
-                
-                
-                
-            
-            });*/
+  
+          
     });
 
     myMap.geoObjects.add(placemark);
