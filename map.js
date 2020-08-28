@@ -101,13 +101,13 @@ function init () {
 
 function  TSP() {
 
-   
-         alert('Типа построили');
+           matrRasstf();
+         alert('Типа построили'+matrRasst);
      
      
  }
 
-   function matrRasst(){
+   function matrRasstf(){
    
         for (var i = 0; i < countOfAdresses+1; i++) {
             for (var j = i+1; j < countOfAdresses+1; j++) {
