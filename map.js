@@ -94,7 +94,7 @@ function init () {
 
     myMap.geoObjects.add(placemark);
           
-    };
+    });
     
     
     
