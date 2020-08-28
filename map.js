@@ -62,6 +62,8 @@ function init () {
                 var newContent = res.geoObjects.get(0) ?
                         res.geoObjects.get(0).properties.get('name') :
                         'Не удалось определить адрес.';
+                var adress =newContent;
+                newContent +='<br />  <button id="counter-button"> Добавить адрес </button>';
 
                 // Задаем новое содержимое балуна в соответствующее свойство метки.
                 placemark.properties.set('balloonContent', newContent);
