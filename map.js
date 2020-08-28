@@ -114,15 +114,7 @@ function  TSP() {
                 route = new ymaps.router( [
                 arrCoordinates[i],
                 arrCoordinates[j]
-            ],
-            params: {
-                //Тип маршрутизации - пешеходная маршрутизация.
-                routingMode: 'pedestrian'
-            }
-        }, {
-            // Автоматически устанавливать границы карты так, чтобы маршрут был виден целиком.
-            boundsAutoApply: true
-        });
+            ])
                 var length = route.getActiveRoute().properties.get("distance");
                 matrRasst[i][j]=lenght;
                 matrRasst[j][i]=lenght;
