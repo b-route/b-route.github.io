@@ -2,6 +2,8 @@ var myMap;
 var adress;
 var countOfAdresses=0;
 let numbers =['first_adress', 'second_adress', 'third_adress', 'fourth_adress'];
+let arrCoordinates=[ [60.008459278062944,30.374591637430463]];
+let coordinates = [0,0];
 
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
@@ -66,6 +68,7 @@ function init () {
                         res.geoObjects.get(0).properties.get('name') :
                         'Не удалось определить адрес.';
                 adress =newContent;
+                coordinates = placemark.geometry.getCoordinates();
                 newContent +='<br />  <button onclick="myFunction()">Добавить адрес</button>';
                
                
@@ -86,11 +89,13 @@ function init () {
  function myFunction() {
 
      if(countOfAdresses>3){
-         alert('Максимальное количество адресов - 4');
+         alert('Максимальное количество адресов - 4', arrCoordinates);
      } else{
         document.getElementById(numbers[countOfAdresses]).innerHTML += adress;
          }
+     
         ++countOfAdresses;
+     arrCoordinates[countOfAdress]=coordinates;
  }
 
 
