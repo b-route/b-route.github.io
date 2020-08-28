@@ -115,13 +115,10 @@ function  TSP() {
                 arrCoordinates[i],
                 arrCoordinates[j]
             ])
-                var activeRoute = route.getActiveRoute();
-                var length;
-            if (activeRoute) {
-                // Получим протяженность маршрута.
-                length = route.getActiveRoute().properties.get("distance");
                
-            }
+                var length = route.getLenght();
+               
+            
                 matrRasst[i][j]=lenght;
                 matrRasst[j][i]=lenght;
     }
