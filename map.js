@@ -1,4 +1,5 @@
 var myMap;
+var adress;
 
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
@@ -62,8 +63,8 @@ function init () {
                 var newContent = res.geoObjects.get(0) ?
                         res.geoObjects.get(0).properties.get('name') :
                         'Не удалось определить адрес.';
-                var adress =newContent;
-                newContent +='<br />  <button onclick="myFunction(adress)">Добавить адрес</button>';
+                adress =newContent;
+                newContent +='<br />  <button onclick="myFunction()">Добавить адрес</button>';
                 
                
                 // Задаем новое содержимое балуна в соответствующее свойство метки.
@@ -80,7 +81,7 @@ function init () {
     };
 
 
- function myFunction(adress) {
+ function myFunction() {
                      $('#first_adress').html(adress);
                     }
     
