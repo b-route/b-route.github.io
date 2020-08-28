@@ -108,15 +108,17 @@ function  TSP() {
  }
 
    function matrRasstf(){
-   var route;
+   var lenght;
         for (var i = 0; i < countOfAdresses+1; i++) {
             for (var j = i+1; j < countOfAdresses+1; j++) {
-                route = new ymaps.route( [
-                arrCoordinates[i],
-                arrCoordinates[j]
-            ])
-               
-                var length = route.getHumanLength();
+                ymaps.route([arrCoordinates[i], arrCoordinates[j]]).then(
+    function (route) {
+        lenght = route.getLenght();
+    },
+    function (error) {
+        alert('Возникла ошибка: ' + error.message);
+    }
+);
                
             
                 matrRasst[i][j]=lenght;
