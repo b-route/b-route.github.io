@@ -111,8 +111,7 @@ function  TSP() {
    
         for (var i = 0; i < countOfAdresses+1; i++) {
             for (var j = i+1; j < countOfAdresses+1; j++) {
-                route = new ymaps.router.Route({
-            referencePoints: [
+                route = new ymaps.router( [
                 arrCoordinates[i],
                 arrCoordinates[j]
             ],
