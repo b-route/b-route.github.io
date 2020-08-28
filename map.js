@@ -61,10 +61,10 @@ function init () {
                 var adress =newContent;
                 newContent +='<br /> <input type="button" id="button" value="Добавить адрес">';
                 
-             \\button.onclick=function(){
+             //button.onclick=function(){
                  
-               \\  $('#first_adress').html(adress);
-             \\}
+               //  $('#first_adress').html(adress);
+             //}
                 
                 
                 
