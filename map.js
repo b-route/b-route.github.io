@@ -64,11 +64,10 @@ function init () {
                         'Не удалось определить адрес.';
                 var adress =newContent;
                 newContent +='<br />  <button onclick="myFunction()">Добавить адрес</button>';
-                //    counter-button.onclick=function(){
-                 
-                      ///   $('#first_adress').html(adress);
-                    //}
                 
+                function myFunction() {
+                     alert('1');
+                    }
                 // Задаем новое содержимое балуна в соответствующее свойство метки.
                 placemark.properties.set('balloonContent', newContent);
             });
