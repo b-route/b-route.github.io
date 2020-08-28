@@ -67,7 +67,7 @@ function init () {
                         'Не удалось определить адрес.';
                 adress =newContent;
                 newContent +='<br />  <button onclick="myFunction()">Добавить адрес</button>';
-                ++countOfAdresses;
+               
                
                 // Задаем новое содержимое балуна в соответствующее свойство метки.
                 placemark.properties.set('balloonContent', newContent);
@@ -84,6 +84,7 @@ function init () {
 
 
  function myFunction() {
+      ++countOfAdresses;
      if(countOfAdresses==6){
          alert('Максимальное количество адрессов - 5');
      } else
