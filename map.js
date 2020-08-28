@@ -116,9 +116,10 @@ function  TSP() {
                 arrCoordinates[j]
             ])
                 var activeRoute = route.getActiveRoute();
+                var length;
             if (activeRoute) {
                 // Получим протяженность маршрута.
-                var length = route.getActiveRoute().properties.get("distance"),
+                length = route.getActiveRoute().properties.get("distance");
                
             }
                 matrRasst[i][j]=lenght;
