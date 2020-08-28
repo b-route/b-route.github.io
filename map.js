@@ -88,7 +88,7 @@ function init () {
      if(countOfAdresses==4){
          alert('Максимальное количество адрессов - 5');
      } else{
-                     document.getElementById(numbers[countOfAdresses]+'_adress').innerHTML = adress;
+                     document.getElementById(numbers[countOfAdresses]).innerHTML = adress;
          }
         ++countOfAdresses;
  }
