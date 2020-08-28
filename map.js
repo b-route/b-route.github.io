@@ -89,7 +89,7 @@ function init () {
  function myFunction() {
 
      if(countOfAdresses>3){
-         alert('Максимальное количество адресов - 4', arrCoordinates);
+         alert('Максимальное количество адресов - 4'+arrCoordinates);
      } else{
         document.getElementById(numbers[countOfAdresses]).innerHTML += adress;
          }
