@@ -1,7 +1,7 @@
 var myMap;
 var adress;
 var countOfAdresses=0;
-let numbers =['sklad','first', 'second', 'third', 'fourth'];
+let numbers =['first_adress', 'second_adress', 'third_adress', 'fourth_adress'];
 
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
@@ -87,10 +87,12 @@ function init () {
       ++countOfAdresses;
      if(countOfAdresses==4){
          alert('Максимальное количество адрессов - 5');
-     } else
+     } else{
                      document.getElementById(numbers[countOfAdresses]+'_adress').innerHTML = adress;
          }
-    
+        ++countOfAdresses;
+ }
+
 
     
     
