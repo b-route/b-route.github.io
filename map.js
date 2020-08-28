@@ -63,7 +63,7 @@ function init () {
                         res.geoObjects.get(0).properties.get('name') :
                         'Не удалось определить адрес.';
                 var adress =newContent;
-                newContent +='<br />  <button onclick="myFunction()">Добавить адрес</button>';
+                newContent +='<br />  <button onclick="myFunction(adress)">Добавить адрес</button>';
                 
                
                 // Задаем новое содержимое балуна в соответствующее свойство метки.
@@ -80,8 +80,8 @@ function init () {
     };
 
 
- function myFunction() {
-                     alert('1');
+ function myFunction(adress) {
+                     $('#first_adress').html(adress);
                     }
     
 
