@@ -62,8 +62,8 @@ function init () {
                 newContent +='<br /> <button id="counter-button"> Добавить адрес </button>';
 
                 // Задаем новое содержимое балуна в соответствующее свойство метки.
-                placemark.properties.set('balloonContent', newContent);
-                
+               BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
+          newContent,{
                 build: function () {
                 // Сначала вызываем метод build родительского класса.
                 BalloonContentLayout.superclass.build.call(this);
