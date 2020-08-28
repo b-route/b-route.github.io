@@ -85,7 +85,7 @@ function init () {
 
  function myFunction() {
 
-     if(countOfAdresses==4){
+     if(countOfAdresses>3){
          alert('Максимальное количество адресов - 4');
      } else{
         document.getElementById(numbers[countOfAdresses]).innerHTML += adress;
