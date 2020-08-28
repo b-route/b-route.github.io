@@ -1,5 +1,7 @@
 var myMap;
 var adress;
+var countOfAdresses=0;
+let numbers =['sklad','first', 'second', 'third', 'fourth'];
 
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
@@ -65,7 +67,7 @@ function init () {
                         'Не удалось определить адрес.';
                 adress =newContent;
                 newContent +='<br />  <button onclick="myFunction()">Добавить адрес</button>';
-                
+                ++countOfAdresses;
                
                 // Задаем новое содержимое балуна в соответствующее свойство метки.
                 placemark.properties.set('balloonContent', newContent);
@@ -82,8 +84,11 @@ function init () {
 
 
  function myFunction() {
-                     document.getElementById('first_adress').innerHTML = adress;
-                    }
+     if(countOfAdresses==6){
+         alert('Максимальное количество адрессов - 5');
+     } else
+                     document.getElementById(numbers[countOfAdresses]+'_adress').innerHTML = adress;
+         }
     
 
     
