@@ -84,7 +84,7 @@ function init () {
 
 
  function myFunction() {
-      ++countOfAdresses;
+
      if(countOfAdresses==4){
          alert('Максимальное количество адрессов - 5');
      } else{
