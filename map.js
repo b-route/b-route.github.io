@@ -39,7 +39,7 @@ function init () {
             iconContent: "",
             hintContent: "Перетащите, чтобы выбрать адрес"
         }, {
-            // Запретим замену обычного балуна на балун-панель.
+            balloonContentLayout: BalloonContentLayout,// Запретим замену обычного балуна на балун-панель.
             balloonPanelMaxMapArea: 0,
             draggable: "true",
             preset: "islands#blueStretchyIcon",
@@ -59,36 +59,16 @@ function init () {
                         res.geoObjects.get(0).properties.get('name') :
                         'Не удалось определить адрес.';
                 var adress =newContent;
-                newContent +='<br /> <button id="counter-button"> Добавить адрес </button>';
-
-                // Задаем новое содержимое балуна в соответствующее свойство метки.
-               BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-          newContent,{
-                build: function () {
-                // Сначала вызываем метод build родительского класса.
-                BalloonContentLayout.superclass.build.call(this);
-                // А затем выполняем дополнительные действия.
-                $('#counter-button').bind('click', this.onCounterClick);
-                $('#first_adress').html(adress);
-            },
-
-            // Аналогично переопределяем функцию clear, чтобы снять
-            // прослушивание клика при удалении макета с карты.
-            clear: function () {
-                // Выполняем действия в обратном порядке - сначала снимаем слушателя,
-                // а потом вызываем метод clear родительского класса.
-                $('#counter-button').unbind('click', this.onCounterClick);
-                BalloonContentLayout.superclass.clear.call(this);
-            },
-
-            onCounterClick: function () {
-                $('#first_adress').html(adress);
-                if (counter == 5) {
-                    alert('Вы славно потрудились.');
-                    counter = 0;
-                    $('#count').html(adress);
-                }
-            }
+                newContent +='<br /> <input type="button" id="button" value="Добавить адрес">';
+                
+             button.onclick=function(){
+                 
+                 $('#first_adress').html(adress);
+             }
+                
+                
+                
+            
             });
     });
 
@@ -97,6 +77,7 @@ function init () {
     });
 } 
     
+
     
     
 
