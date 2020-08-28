@@ -39,7 +39,7 @@ function init () {
             iconContent: "",
             hintContent: "Перетащите, чтобы выбрать адрес"
         }, {
-            balloonContentLayout: BalloonContentLayout,// Запретим замену обычного балуна на балун-панель.
+            // Запретим замену обычного балуна на балун-панель.
             balloonPanelMaxMapArea: 0,
             draggable: "true",
             preset: "islands#blueStretchyIcon",
