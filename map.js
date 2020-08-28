@@ -59,12 +59,12 @@ function init () {
                         res.geoObjects.get(0).properties.get('name') :
                         'Не удалось определить адрес.';
                 var adress =newContent;
-                //newContent +='<br /> <input type="button" id="button" value="Добавить адрес">';
+                newContent +='<br /> <input type="button" id="button" value="Добавить адрес">';
                 
-             button.onclick=function(){
+             \\button.onclick=function(){
                  
-                 $('#first_adress').html(adress);
-             }
+               \\  $('#first_adress').html(adress);
+             \\}
                 
                 
                 
