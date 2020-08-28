@@ -116,7 +116,7 @@ function  TSP() {
                 arrCoordinates[j]
             ])
                
-                var length = route.router.getLength();
+                var length = route.router.Route.getLength();
                
             
                 matrRasst[i][j]=lenght;
