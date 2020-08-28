@@ -82,7 +82,7 @@ function init () {
 
 
  function myFunction() {
-                     $('#first_adress').html(adress);
+                     document.getElementById('first_adress').innerHTML = adress;
                     }
     
 
