@@ -95,7 +95,8 @@ function init () {
          }
      
         ++countOfAdresses;
-     arrCoordinates[countOfAdress]=coordinates;
+     arrCoordinates[countOfAdress][0]=coordinates[0];
+      arrCoordinates[countOfAdress][1]=coordinates[1];
  }
 
 
