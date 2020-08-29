@@ -117,6 +117,8 @@ function  TSP() {
                 
                matrRasst[i][j]=0;  
             }}
+       
+       alert(matrRasst);
         for (var i = 0; i < countOfAdresses+1; i++) {
             for (var j = i+1; j < countOfAdresses+1; j++) {
                 ymaps.route([arrCoordinates[i], arrCoordinates[j]]).then(
