@@ -124,7 +124,7 @@ function  TSP() {
                 alert('в цикле');
                 ymaps.route([arrCoordinates[i], arrCoordinates[j]]).then(
     function (route) {
-        lenght = route.getLenght();
+        lenght = route.getTime();
         alert(lenght);
     },
     function (error) {
