@@ -124,6 +124,7 @@ function  TSP() {
                 ymaps.route([arrCoordinates[i], arrCoordinates[j]]).then(
     function (route) {
         lenght = route.getLenght();
+        
     },
     function (error) {
         alert('Возникла ошибка: ' + error.message);
@@ -133,6 +134,7 @@ function  TSP() {
             
                 matrRasst[i][j]=lenght;
                 matrRasst[j][i]=lenght;
+                alert(matrRasst);
     }
 }
    
