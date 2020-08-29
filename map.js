@@ -121,7 +121,7 @@ function  TSP() {
        alert(matrRasst);
         for (var i = 0; i < countOfAdresses+1; i++) {
             for (var j = i+1; j < countOfAdresses+1; j++) {
-                alert('в цикле');
+                alert(arrCoordinates[i]);
                 ymaps.route([arrCoordinates[i], arrCoordinates[j]]).then(
     function (route) {
         lenght = route.getTime();
