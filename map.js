@@ -121,22 +121,18 @@ function  TSP() {
        alert(matrRasst);
         for (var i = 0; i < countOfAdresses+1; i++) {
             for (var j = i+1; j < countOfAdresses+1; j++) {
-                
                 ymaps.route([arrCoordinates[i], arrCoordinates[j]]).then(
-    function (route) {
-        lenght = route.getTime();
-         matrRasst[i][j]=lenght;
-         matrRasst[j][i]=lenght;
-         alert(matrRasst);
-    },
-    function (error) {
-        alert('Возникла ошибка: ' + error.message);
-    }
-        );
-               
-            
-               
-    }}
+                    function (route) {
+                        lenght = route.getTime();
+                        matrRasst[i][j]=lenght;
+                        matrRasst[j][i]=lenght;
+                        alert('Время'+ lenght+' ====== '+matrRasst);
+                    },
+                    function (error) {
+                        alert('Возникла ошибка: ' + error.message);
+                    }
+                );     
+            }}
    alert(matrRasst);
    
    }
