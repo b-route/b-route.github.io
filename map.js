@@ -125,7 +125,7 @@ function  TSP() {
        for (var k = 0; k < countOfAdresses+1; k++) {
            for (var j = 0; j < countOfAdresses+1; j++) {
                //var route=ymaps.route([arrCoordinates[i], arrCoordinates[j]]);
-               ymaps.route([arrCoordinates[k], arrCoordinates[j]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+               ymaps.route([arrCoordinates[k], arrCoordinates[j]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
                    function (route) {
                        lenght = route.getTime();
                        matrRasst[k][j]=lenght;
