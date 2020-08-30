@@ -4,7 +4,7 @@ var countOfAdresses=0;
 let numbers =['first_adress', 'second_adress', 'third_adress', 'fourth_adress'];
 let arrCoordinates=[ [60.008459278062944,30.374591637430463]];
 let coordinates = [0,0];
-let matrRasst=[];
+var matrRasst=[];
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
 
@@ -108,32 +108,33 @@ function  TSP() {
  }
 
    function matrRasstf(){
-   var lenght;
+       var lenght;
        for (var i = 0; i < countOfAdresses+1; i++){
-       matrRasst[i]=[];
+            matrRasst[i]=[];
        }
        for (var i = 0; i < countOfAdresses+1; i++) {
             for (var j = 0; j < countOfAdresses+1; j++) {
-                
-               matrRasst[i][j]=0;  
-            }}
+                matrRasst[i][j]=0;  
+            }
+       }
        
        alert(matrRasst);
-        for (var i = 0; i < countOfAdresses+1; i++) {
-            for (var j = i+1; j < countOfAdresses+1; j++) {
-                ymaps.route([arrCoordinates[i], arrCoordinates[j]]).then(
-                    function (route) {
-                        lenght = route.getTime();
-                        matrRasst[i][j]=lenght;
-                        matrRasst[j][i]=lenght;
-                        alert('Время'+ lenght+' ====== '+matrRasst);
-                    },
-                    function (error) {
-                        alert('Возникла ошибка: ' + error.message);
-                    }
-                );     
-            }}
-   alert(matrRasst);
+       for (var i = 0; i < countOfAdresses+1; i++) {
+           for (var j = i+1; j < countOfAdresses+1; j++) {
+               ymaps.route([arrCoordinates[i], arrCoordinates[j]]).then(
+                   function (route) {
+                       lenght = route.getTime();
+                       matrRasst[i][j]=lenght;
+                       matrRasst[j][i]=lenght;
+                       alert('Время'+ lenght+' ====== '+matrRasst);
+                   },
+                   function (error) {
+                       alert('Возникла ошибка: ' + error.message);
+                   }
+               );     
+           }
+       }
+        alert('Итого:  'matrRasst);
    
    }
     
