@@ -126,6 +126,9 @@ function  TSP() {
     function (route) {
         lenght = route.getTime();
         alert(lenght+' время');
+         matrRasst[i][j]=lenght;
+         matrRasst[j][i]=lenght;
+         alert(matrRasst);
     },
     function (error) {
         alert('Возникла ошибка: ' + error.message);
@@ -133,9 +136,7 @@ function  TSP() {
 );
                
             
-                matrRasst[i][j]=lenght;
-                matrRasst[j][i]=lenght;
-                alert(matrRasst);
+               
     }
 }
    
