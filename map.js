@@ -114,7 +114,7 @@ function  TSP() {
        }
        for (var i = 0; i < countOfAdresses+1; i++) {
             for (var j = 0; j < countOfAdresses+1; j++) {
-                matrRasst[i][j]=0;  
+                matrRasst[i][j]=0.0;  
             }
        }
        
