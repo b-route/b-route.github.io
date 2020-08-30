@@ -124,7 +124,7 @@ function  TSP() {
                var route=ymaps.route([arrCoordinates[i], arrCoordinates[j]]);
                //ymaps.route([60.008459278062944,30.374591637430463], [60.008459278062944,30.374591637430463]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
                    //function (route) {
-                       lenght = route.getTime();
+                       lenght = route..router.Route.getTime();
                        matrRasst[i][j]=lenght;
                        matrRasst[j][i]=lenght;
                        alert('Время'+ lenght+' ====== '+matrRasst);
