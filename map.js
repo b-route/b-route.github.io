@@ -125,7 +125,6 @@ function  TSP() {
                 ymaps.route([arrCoordinates[i], arrCoordinates[j]]).then(
     function (route) {
         lenght = route.getTime();
-        alert(lenght+' время');
          matrRasst[i][j]=lenght;
          matrRasst[j][i]=lenght;
          alert(matrRasst);
@@ -133,13 +132,12 @@ function  TSP() {
     function (error) {
         alert('Возникла ошибка: ' + error.message);
     }
-);
+        );
                
             
                
-    }
-}
-   
+    }}
+   alert(matrRasst);
    
    }
     
