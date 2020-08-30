@@ -134,7 +134,7 @@ function  TSP() {
                );     
            }
        }
-        alert('Итого:  'matrRasst);
+        alert('Итого:  '+matrRasst);
    
    }
     
