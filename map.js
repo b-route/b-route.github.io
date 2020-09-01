@@ -120,7 +120,7 @@ function  TSP() {
        
        alert(matrRasst);
        
-       await ymaps.ready(function(){
+       
            var route;
        for (x in arrCoordinates) {
            for (y in arrCoordinates) {
@@ -138,7 +138,7 @@ function  TSP() {
                );     
            }
        }
-   });
+
        
         alert('Итого:  '+matrRasst);
    
