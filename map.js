@@ -122,13 +122,13 @@ function  TSP() {
        
        ymaps.ready(function(){
            
-       for (var k = 0; k < countOfAdresses+1; k++) {
-           for (var j = 0; j < countOfAdresses+1; j++) {
+       for (x in arrCoordinates) {
+           for (y in ) {
                //var route=ymaps.route([arrCoordinates[i], arrCoordinates[j]]);
-               await ymaps.route([arrCoordinates[0], arrCoordinates[1]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+               ymaps.route([x, y]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
                    function (route) {
                        lenght = route.getTime();
-                       matrRasst[0][1]=lenght;
+                       matrRasst[arrCoordinates.indexOf(x)][arrCoordinates.indexOf(y)]=lenght;
                        //matrRasst[j][k]=lenght;
                        //alert('Время'+ lenght+' ====== '+matrRasst);
                    },
