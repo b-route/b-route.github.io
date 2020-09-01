@@ -121,47 +121,11 @@ function  TSP() {
        alert(matrRasst);
        
        ymaps.ready(function(){
-            ymaps.route([arrCoordinates[0], arrCoordinates[0]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
-                   function (route) {
-                       lenght = route.getTime();
-                       matrRasst[0][0]=lenght;
-                       //matrRasst[j][k]=lenght;
-                       //alert('Время'+ lenght+' ====== '+matrRasst);
-                   },
-                   function (error) {
-                      alert('Возникла ошибка: ' + error.message);
-                   }
-               );   
-           if (arrCoordinates[2]) {ymaps.route([arrCoordinates[0], arrCoordinates[2]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
-                   function (route) {
-                       lenght = route.getTime();
-                       matrRasst[0][2]=lenght;
-                       matrRasst[2][0]=lenght;
-                       //matrRasst[j][k]=lenght;
-                       //alert('Время'+ lenght+' ====== '+matrRasst);
-                   },
-                   function (error) {
-                      alert('Возникла ошибка: ' + error.message);
-                   }
-               );     }
-           if (arrCoordinates[3]) {ymaps.route([arrCoordinates[0], arrCoordinates[3]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
-                   function (route) {
-                       lenght = route.getTime();
-                       matrRasst[0][3]=lenght;
-                       matrRasst[3][0]=lenght;
-                       //matrRasst[j][k]=lenght;
-                       //alert('Время'+ lenght+' ====== '+matrRasst);
-                   },
-                   function (error) {
-                      alert('Возникла ошибка: ' + error.message);
-                   }
-               );     }
            
-           
-       /*for (var k = 0; k < countOfAdresses+1; k++) {
+       for (var k = 0; k < countOfAdresses+1; k++) {
            for (var j = 0; j < countOfAdresses+1; j++) {
                //var route=ymaps.route([arrCoordinates[i], arrCoordinates[j]]);
-               ymaps.route([arrCoordinates[0], arrCoordinates[1]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+               await ymaps.route([arrCoordinates[0], arrCoordinates[1]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
                    function (route) {
                        lenght = route.getTime();
                        matrRasst[0][1]=lenght;
@@ -174,7 +138,7 @@ function  TSP() {
                );     
            }
        }
-   }*/
+   }
        
         alert('Итого:  '+matrRasst);
    
