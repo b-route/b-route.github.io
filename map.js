@@ -123,7 +123,7 @@ function  TSP() {
        ymaps.ready(function(){
            
        for (x in arrCoordinates) {
-           for (y in ) {
+           for (y in arrCoordinates) {
                //var route=ymaps.route([arrCoordinates[i], arrCoordinates[j]]);
                ymaps.route([x, y]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
                    function (route) {
