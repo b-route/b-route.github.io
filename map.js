@@ -353,7 +353,7 @@ function  TSP() {
        //}
 
        
-        alert('Итого:  '+matrRasst);
+        setTimeout(() =>alert('Итого:  '+matrRasst), 1500);
    
    }
     
