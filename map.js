@@ -135,7 +135,83 @@ function  TSP() {
                    function (error) {
                       alert('Возникла ошибка: ' + error.message);
                    }
-               );     
+               ); 
+       
+       
+                if(arrCoordinates[2][0]) {ymaps.route([ arrCoordinates[0],  arrCoordinates[2]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+                   function (route) {
+                       lenght = route.getTime();
+                       matrRasst[2][0]=lenght;
+                       //matrRasst[j][k]=lenght;
+                       //alert('Время'+ lenght+' ====== '+matrRasst);
+                   },
+                   function (error) {
+                      alert('Возникла ошибка: ' + error.message);
+                   }
+               ); 
+                   ymaps.route([ arrCoordinates[1],  arrCoordinates[2]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+                   function (route) {
+                       lenght = route.getTime();
+                       matrRasst[2][1]=lenght;
+                       //matrRasst[j][k]=lenght;
+                       //alert('Время'+ lenght+' ====== '+matrRasst);
+                   },
+                   function (error) {
+                      alert('Возникла ошибка: ' + error.message);
+                   }
+               );
+                                         
+                                         
+                                         }
+       
+               if(arrCoordinates[3][0]) {ymaps.route([ arrCoordinates[0],  arrCoordinates[3]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+                   function (route) {
+                       lenght = route.getTime();
+                       matrRasst[3][0]=lenght;
+                       //matrRasst[j][k]=lenght;
+                       //alert('Время'+ lenght+' ====== '+matrRasst);
+                   },
+                   function (error) {
+                      alert('Возникла ошибка: ' + error.message);
+                   }
+               );
+                  ymaps.route([ arrCoordinates[1],  arrCoordinates[3]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+                   function (route) {
+                       lenght = route.getTime();
+                       matrRasst[3][1]=lenght;
+                       //matrRasst[j][k]=lenght;
+                       //alert('Время'+ lenght+' ====== '+matrRasst);
+                   },
+                   function (error) {
+                      alert('Возникла ошибка: ' + error.message);
+                   }
+               );      
+                                         
+                   ymaps.route([ arrCoordinates[2],  arrCoordinates[3]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+                   function (route) {
+                       lenght = route.getTime();
+                       matrRasst[3][2]=lenght;
+                       //matrRasst[j][k]=lenght;
+                       //alert('Время'+ lenght+' ====== '+matrRasst);
+                   },
+                   function (error) {
+                      alert('Возникла ошибка: ' + error.message);
+                   }
+               );      
+                                        
+                                        }
+       
+              if(arrCoordinates[4][0]) {ymaps.route([ arrCoordinates[0],  arrCoordinates[4]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+                   function (route) {
+                       lenght = route.getTime();
+                       matrRasst[4][0]=lenght;
+                       //matrRasst[j][k]=lenght;
+                       //alert('Время'+ lenght+' ====== '+matrRasst);
+                   },
+                   function (error) {
+                      alert('Возникла ошибка: ' + error.message);
+                   }
+               ); }
            //}
        //}
 
