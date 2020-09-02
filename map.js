@@ -109,11 +109,11 @@ function  TSP() {
 
    function matrRasstf(){
        var lenght;
-       for (var i = 0; i < countOfAdresses+1; i++){
+       for (var i = 0; i < 5; i++){
             matrRasst[i]=[];
        }
-       for (var i = 0; i < countOfAdresses+1; i++) {
-            for (var j = 0; j < countOfAdresses+1; j++) {
+       for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
                 matrRasst[i][j]=0.0;  
             }
        }
