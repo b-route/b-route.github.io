@@ -138,6 +138,18 @@ function  TSP() {
                ); 
        
        
+        ymaps.route([ arrCoordinates[1],  arrCoordinates[0]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+                   function (route) {
+                       lenght = route.getTime();
+                       matrRasst[1][0]=lenght;
+                       //matrRasst[j][k]=lenght;
+                       //alert('Время'+ lenght+' ====== '+matrRasst);
+                   },
+                   function (error) {
+                      alert('Возникла ошибка: ' + error.message);
+                   }
+               ); 
+       
                 if(arrCoordinates[2][0]) {ymaps.route([ arrCoordinates[0],  arrCoordinates[2]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
                    function (route) {
                        lenght = route.getTime();
@@ -353,7 +365,7 @@ function  TSP() {
        //}
 
        
-        setTimeout(() =>alert('Итого:  '+matrRasst), 1500);
+        setTimeout(() =>alert('Итого:  '+matrRasst), 15000);
    
    }
     
