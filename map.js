@@ -5,6 +5,10 @@ let numbers =['first_adress', 'second_adress', 'third_adress', 'fourth_adress'];
 let arrCoordinates=[ [60.008459278062944,30.374591637430463]];
 let coordinates = [0,0];
 var matrRasst=[];
+var que=[0, 1, 2, 3, 4];
+var res = [];
+   
+
 // Дождёмся загрузки API и готовности DOM.
 ymaps.ready(init);
 
@@ -372,9 +376,7 @@ function  zadacha() {
 function TSP(){
         var minCost = 100000000000000000000000000000000;
     
-    var que=[0, 1, 2, 3, 4];
-    var res = [];
-   
+  
     do {
 		
 		var cost = 0;
@@ -392,12 +394,13 @@ function TSP(){
     
 bool next_permutation(que)
 {
+	var first = que[0], last[countOfAdresses];
     if (first == last) return false;
-    BidirIt i = last;
-    if (first == --i) return false;
+    var i = que.indexOf(last);
+    if (first == que[--i]) return false;
  
     while (true) {
-        BidirIt i1, i2;
+        var i1, i2;
  
         i1 = i;
         if (*--i < *i1) {
