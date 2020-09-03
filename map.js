@@ -99,7 +99,7 @@ function init () {
      
  }
 
-function  TSP() {
+function  zadacha() {
 
            matrRasstf();
          alert('Типа построили'+matrRasst);
@@ -368,5 +368,26 @@ function  TSP() {
         setTimeout(() =>alert('Итого:  '+matrRasst), 15000);
    
    }
+
+function TSP(){
+        var minCost = 100000000000000000000000000000000;
+    
+    var que=[0, 1, 2, 3, 4];
+    var res = [];
+   
+    do {
+		
+		var cost = 0;
+		cost += GamGrVes[que.at(n - 1)][que.at(0)];
+		if (cost < minCost) {
+			res.clear();
+			res.resize(que.size());
+			copy(que.begin(), que.end(), res.begin());
+			minCost = cost;
+		}
+	} while (next_permutation(que.begin(), que.end()));
+
+
+}
     
 
