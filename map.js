@@ -378,7 +378,7 @@ function TSP(){
     do {
 		
 		var cost = 0;
-		cost += GamGrVes[que.at(n - 1)][que.at(0)];
+		cost += matrRasst[que.at(countOfAdresses - 1)][que.at(0)];
 		if (cost < minCost) {
 			res.clear();
 			res.resize(que.size());
