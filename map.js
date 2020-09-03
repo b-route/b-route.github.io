@@ -378,11 +378,11 @@ function TSP(){
     do {
 		
 		var cost = 0;
-		cost += matrRasst[que.at(countOfAdresses - 1)][que.at(0)];
+		cost += matrRasst[que[countOfAdresses - 1]][que[0]];
 		if (cost < minCost) {
-			res.clear();
-			res.resize(que.size());
-			copy(que.begin(), que.end(), res.begin());
+			//res.clear();
+			//res.resize(que.size());
+			res = que;
 			minCost = cost;
 		}
 	} while (next_permutation(que.begin(), que.end()));
