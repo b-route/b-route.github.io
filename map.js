@@ -106,9 +106,9 @@ function init () {
 function  zadacha() {
 
            matrRasstf();
-         alert('Типа построили'+matrRasst);
+  
      setTimeout(() =>TSP(), 30000);
-	setTimeout(() =>addRoutes(), 70000);
+	setTimeout(() =>addRoutes(), 50000);
      
  }
 
@@ -123,7 +123,7 @@ function  zadacha() {
             }
        }
        
-       alert(matrRasst);
+      
        
        
            var route;
