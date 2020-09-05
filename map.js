@@ -415,14 +415,23 @@ function permute(arr) {
 
 
 function addRoutes(){
-        var route1 = new ymaps.route([ arrCoordinates[0],  arrCoordinates[res[0]]);
-	var route2 = new ymaps.route([ arrCoordinates[res[0]],  arrCoordinates[res[1]]);	
-	var route3 = new ymaps.route([ arrCoordinates[res[1]],  arrCoordinates[res[2]]);
-	var route4 = new ymaps.route([ arrCoordinates[res[3]],  arrCoordinates[0]);
+        //var route1 = new ymaps.route([ arrCoordinates[0],  arrCoordinates[res[0]]);
+	//var route2 = new ymaps.route([ arrCoordinates[res[0]],  arrCoordinates[res[1]]);	
+	//var route3 = new ymaps.route([ arrCoordinates[res[1]],  arrCoordinates[res[2]]);
+	//var route4 = new ymaps.route([ arrCoordinates[res[3]],  arrCoordinates[0]);
 
-	 myMap.geoObjects.add(route1);
-	myMap.geoObjects.add(route2);
-	myMap.geoObjects.add(route3);
-	myMap.geoObjects.add(route4);
-	
+	 //myMap.geoObjects.add(route1);
+	//myMap.geoObjects.add(route2);
+	//myMap.geoObjects.add(route3);
+	//myMap.geoObjects.add(route4);
+	ymaps.route([ arrCoordinates[0],  arrCoordinates[res[0]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+                   function (route) {
+                       myMap.geoObjects.add(route);
+                       //matrRasst[j][k]=lenght;
+                       //alert('Время'+ lenght+' ====== '+matrRasst);
+                   },
+                   function (error) {
+                      alert('Возникла ошибка: ' + error.message);
+                   }
+               ); 
 }
