@@ -107,7 +107,7 @@ function  zadacha() {
 
            matrRasstf();
          alert('Типа построили'+matrRasst);
-     TSP();// setTimeout(() =>TSP(), 15000);
+     setTimeout(() =>TSP(), 150000);
      
  }
 
