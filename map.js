@@ -377,17 +377,17 @@ function TSP(){
         var minCost = 100000000000000000000000000000000;
     	var per=permute(que);
   
-    do {
-		
+   for(var que1 of per)
+   {
 		var cost = 0;
-		cost += matrRasst[que[countOfAdresses - 1]][que[0]];
+		cost += matrRasst[que1[countOfAdresses - 1]][que1[0]];
 		if (cost < minCost) {
 			//res.clear();
 			//res.resize(que.size());
-			res = que;
+			res = que1;
 			minCost = cost;
 		}
-	} while (perm.next());
+	} 
 
 
 }
