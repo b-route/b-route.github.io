@@ -384,6 +384,7 @@ function TSP(){
 	   cost+=matrRasst[que1[i]][que1[i+1]]}
 		cost += matrRasst[que1[3]][0];
 	   cost += matrRasst[0][que1[3]]
+	   console.log(que1+ ' === стоимость===' + cost);
 		if (cost < minCost) {
 			//res.clear();
 			//res.resize(que.size());
