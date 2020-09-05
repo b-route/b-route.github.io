@@ -375,7 +375,7 @@ function  zadacha() {
 
 function TSP(){
         var minCost = 100000000000000000000000000000000;
-    
+    	var per=permute(que);
   
     do {
 		
@@ -387,33 +387,23 @@ function TSP(){
 			res = que;
 			minCost = cost;
 		}
-	} while (next_permutation(que));
+	} while (perm.next());
 
 
 }
     
-bool next_permutation(que)
-{
-	var first = que[0], last[countOfAdresses];
-    if (first == last) return false;
-    var i = que.indexOf(last);
-    if (first == que[--i]) return false;
- 
-    while (true) {
-        var i1, i2;
- 
-        i1 = i;
-        if (*--i < *i1) {
-            i2 = last;
-            while (!(*i < *--i2))
-                ;
-            std::iter_swap(i, i2);
-            std::reverse(i1, last);
-            return true;
-        }
-        if (i == first) {
-            std::reverse(first, last);
-            return false;
-        }
+
+function permute(arr) {
+  var l = arr.length,
+      used = Array(l),
+      data = Array(l);
+  return function* backtracking(pos) {
+    if(pos == l) yield data.slice();
+    else for(var i=0; i<l; ++i) if(!used[i]) {
+      used[i] = true;
+      data[pos] = arr[i];
+      yield* backtracking(pos+1);
+      used[i] = false;
     }
+  }(0);
 }
