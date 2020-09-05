@@ -5,7 +5,7 @@ let numbers =['first_adress', 'second_adress', 'third_adress', 'fourth_adress'];
 let arrCoordinates=[ [60.008459278062944,30.374591637430463]];
 let coordinates = [0,0];
 var matrRasst=[];
-var que=[0, 1, 2, 3, 4];
+var que=[1, 2, 3, 4];
 var res = [];
    
 
@@ -380,7 +380,10 @@ function TSP(){
    for(var que1 of per)
    {
 		var cost = 0;
-		cost += matrRasst[que1[countOfAdresses - 1]][que1[0]];
+	   for(var i=0; i<2; i++){
+	   cost+=matrRasst[que1[i]][que1[i+1]]}
+		cost += matrRasst[que1[3]][0];
+	   cost += matrRasst[0][que1[3]]
 		if (cost < minCost) {
 			//res.clear();
 			//res.resize(que.size());
