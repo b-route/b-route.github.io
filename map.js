@@ -107,7 +107,8 @@ function  zadacha() {
 
            matrRasstf();
          alert('Типа построили'+matrRasst);
-     setTimeout(() =>TSP(), 150000);
+     setTimeout(() =>TSP(), 30000);
+	setTimeout(() =>addRoutes(), 70000);
      
  }
 
@@ -410,4 +411,18 @@ function permute(arr) {
       used[i] = false;
     }
   }(0);
+}
+
+
+function addRoutes(){
+        var route1 = ymaps.route([ arrCoordinates[0],  arrCoordinates[res[0]]);
+	var route2 = ymaps.route([ arrCoordinates[res[0]],  arrCoordinates[res[1]]);	
+	var route3 = ymaps.route([ arrCoordinates[res[1]],  arrCoordinates[res[2]]);
+	var route4 = ymaps.route([ arrCoordinates[res[3]],  arrCoordinates[0]);
+
+	 myMap.geoObjects.add(route1);
+	myMap.geoObjects.add(route2);
+	myMap.geoObjects.add(route3);
+	myMap.geoObjects.add(route4);
+	
 }
