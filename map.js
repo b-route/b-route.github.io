@@ -424,7 +424,7 @@ function addRoutes(){
 	myMap.geoObjects.add(route2);
 	myMap.geoObjects.add(route3);
 	myMap.geoObjects.add(route4);*/
-	ymaps.route([ arrCoordinates[0],  arrCoordinates[res[0]]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
+	ymaps.route([ arrCoordinates[0],  arrCoordinates[res[0]], arrCoordinates[res[1]]]).then(//[arrCoordinates[i], arrCoordinates[j]]).then(
                    function (route) {
                        myMap.geoObjects.add(route);
                        //matrRasst[j][k]=lenght;
@@ -434,4 +434,6 @@ function addRoutes(){
                       alert('Возникла ошибка: ' + error.message);
                    }
                ); 
+	
+	
 }
