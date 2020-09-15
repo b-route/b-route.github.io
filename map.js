@@ -2,7 +2,7 @@ var myMap;
 var adress;
 var countOfAdresses=0;
 let numbers =['first_adress', 'second_adress', 'third_adress', 'fourth_adress'];
-let arrCoordinates=[ [60.00971665492313,30.36983877740292]];
+let arrCoordinates=[ [60.00971665492313,30.36983877740292], [60.00971665492313,30.36983877740292], [60.00971665492313,30.36983877740292], [60.00971665492313,30.36983877740292], [60.00971665492313,30.36983877740292]];
 let coordinates = [0,0];
 var matrRasst=[];
 var que=[1, 2, 3, 4];
