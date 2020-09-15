@@ -18,7 +18,7 @@ function init () {
     myMap = new ymaps.Map('map', {
         // При инициализации карты обязательно нужно указать
         // её центр и коэффициент масштабирования.
-        center: [60.008459278062944,30.374591637430463], // Москва
+        center: [60.008459278062944,30.374591637430463], // 4-ый корпус
         zoom: 15
     });
 
@@ -93,7 +93,7 @@ function init () {
  function myFunction() {
 
      if(countOfAdresses>3){
-         alert('Максимальное количество адресов - 4'+arrCoordinates);
+         alert('Максимальное количество адресов - 4');
      } else{
         document.getElementById(numbers[countOfAdresses]).innerHTML += adress;
          }
