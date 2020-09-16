@@ -11,14 +11,14 @@ body {
   background-image:
     repeating-linear-gradient(
       150deg,
-      rgba(255, 255, 255, 0.5),
-      rgba(255, 255, 255, 0.5) 3px,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 2px,
       transparent 0,
       transparent 41px),
     repeating-linear-gradient(
       -150deg,
-      rgba(255, 255, 255, 0.06),
-      rgba(255, 255, 255, 0.06) 1px,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 2px,
       transparent 0,
       transparent 41px);
 
