@@ -107,8 +107,8 @@ function  zadacha() {
 
            matrRasstf();
   
-     setTimeout(() =>TSP(), 10000);
-	setTimeout(() =>addRoutes(), 30000);
+     setTimeout(() =>TSP(), 30000);
+	setTimeout(() =>addRoutes(), 50000);
      
  }
 
